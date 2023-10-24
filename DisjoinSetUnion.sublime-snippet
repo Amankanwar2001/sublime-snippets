@@ -1,0 +1,37 @@
+<snippet>
+  <content><![CDATA[
+class dsu {
+	vector<int> sz, p;
+public:
+	dsu(int n) {
+		sz.resize(n + 1, 1);
+		p.resize(n + 1);
+		for (int i = 0; i <= n; i++) p[i] = i;
+	}
+
+	int get(int node) {
+		return p[node] = (p[node] == node ? node : get(p[node]));
+	}
+
+	void join(int u, int v) {
+		u = get(u);
+		v = get(v);
+		if (u == v) return;
+
+		if (sz[u] < sz[v]) {
+			p[u] = v;
+			sz[v] += sz[u];
+		}
+		else {
+			p[v] = u;
+			sz[u] += sz[v];
+		}
+		return;
+	}
+};
+]]></content>
+  <tabTrigger>DSU</tabTrigger>
+  <description>Disjoint Union Set Data STructure</description>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <!-- <scope >source.python</scope > -->
+</snippet>

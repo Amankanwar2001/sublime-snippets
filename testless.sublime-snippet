@@ -1,0 +1,33 @@
+<snippet>
+  <content><![CDATA[
+// Jai Shree Ram
+
+#include<bits/stdc++.h>
+using namespace std;
+
+typedef long long ll;
+const ll mod = 1000000007;
+const ll MOD = 998244353;
+const ll Inf = 1E18;
+const int dx[] = {0,  0, 1, -1, -1, -1,  1, 1};
+const int dy[] = {1, -1, 0,  0, -1,  1, -1, 1};
+
+void solve() {
+	$0
+}
+
+int main() {
+	ios_base::sync_with_stdio(false);
+	cin.tie(NULL);
+	cout.tie(NULL);
+
+	solve();
+
+	return 0;
+}
+]]></content>
+  <tabTrigger>hello</tabTrigger>
+  <description>without test case</description>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <!-- <scope >source.python</scope > -->
+</snippet>
